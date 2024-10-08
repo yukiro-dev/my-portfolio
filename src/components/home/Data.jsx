@@ -9,7 +9,7 @@ const Data = () => {
                     viewBox="0 0 48 48"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
-                    class="home__hand"
+                    className="home__hand"
                 >
                     <path
                         d="M25.4995 32.0305L31.3495 33.1555L36.1495 8.48051C36.4495 6.83051 35.3995 5.18051 33.8245 4.88051C32.1745 4.58051 30.5995 5.70551 30.2995 7.35551L25.4995 32.0305Z"
@@ -55,15 +55,17 @@ const Data = () => {
             </h1>
             <h3 className="home__subtitle">Front-end Developer</h3>
             <p className="home__description">
-                I&apos;m a front-end developer with a passion for creating
-                beautiful and functional web applications. I&apos;m a quick
-                learner and I&apos;m always looking to improve my skills.
+                I&apos;m a front-end developer passionate about creating
+                beautiful, functional web applications that enhance user
+                experience and meet your business goals. I help clients
+                transform their ideas into responsive, high-performance digital
+                solutions.
             </p>
 
             <a href="#contact" className="button button--flex home__button">
                 Say Hello
                 <svg
-                    class="button__icon"
+                    className="button__icon"
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
                     height="24"

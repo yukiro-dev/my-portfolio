@@ -1,5 +1,5 @@
 import "./testimonials.css";
-import { Data } from "./Data";
+import { Data, NoData } from "./Data";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -35,21 +35,43 @@ const Testimonials = () => {
                 modules={[Pagination]}
                 className="testimonial__container"
             >
-                {Data.map(({ id, image, title, description }) => {
-                    return (
-                        <SwiperSlide className="testimonial__card" key={id}>
-                            <img
-                                src={image}
-                                alt="testimonial"
-                                className="testimonial__img"
-                            />
-                            <h3 className="testimonial__name">{title}</h3>
-                            <p className="testimonial__description">
-                                {description}
-                            </p>
-                        </SwiperSlide>
-                    );
-                })}
+                {Data.length > 0
+                    ? Data.map(({ id, image, title, description }) => {
+                          return (
+                              <SwiperSlide
+                                  className="testimonial__card"
+                                  key={id}
+                              >
+                                  <img
+                                      src={image}
+                                      alt="testimonial"
+                                      className="testimonial__img"
+                                  />
+                                  <h3 className="testimonial__name">{title}</h3>
+                                  <p className="testimonial__description">
+                                      {description}
+                                  </p>
+                              </SwiperSlide>
+                          );
+                      })
+                    : NoData.map(({ id, image, title, description }) => {
+                          return (
+                              <SwiperSlide
+                                  className="testimonial__card-placeholder"
+                                  key={id}
+                              >
+                                  <img
+                                      src={image}
+                                      alt="testimonial"
+                                      className="testimonial__img"
+                                  />
+                                  <h3 className="testimonial__name">{title}</h3>
+                                  <p className="testimonial__description">
+                                      {description}
+                                  </p>
+                              </SwiperSlide>
+                          );
+                      })}
             </Swiper>
         </section>
     );

@@ -24,6 +24,14 @@ const Social = () => {
             >
                 <i className="fa-brands fa-tiktok"></i>
             </a>
+
+            <a
+                href="https://github.com/yukiro-dev"
+                className="home__social-icon"
+                target="_blank"
+            >
+                <i className="uil uil-github"></i>
+            </a>
         </div>
     );
 };

@@ -1,5 +1,6 @@
 import "./services.css";
 import { useState } from "react";
+import ServiceItem from "./ServiceItem";
 
 const Services = () => {
     const [toggleState, setToggleState] = useState(0);
@@ -8,197 +9,63 @@ const Services = () => {
         setToggleState(index);
     };
 
+    const servicesData = [
+        {
+            iconType: "boxicons",
+            icon: "bx-palette",
+            title: "UI/UX Designer",
+            description:
+                "Service with 1 year of experience. Providing stunning designs and user experiences.",
+            services: [
+                "I design websites and web applications.",
+                "I design mobile applications.",
+                "I create design systems.",
+            ],
+        },
+        {
+            iconType: "boxicons",
+            icon: "bx-code-alt",
+            title: "Frontend Developer",
+            description:
+                "Service with 1 year of experience. Creating responsive and interactive web applications.",
+            services: [
+                "I develop web applications.",
+                "I create responsive websites.",
+                "I implement design systems.",
+            ],
+        },
+        {
+            iconType: "boxicons",
+            icon: "bx-joystick",
+            title: "Game Developer",
+            description:
+                "Still learning, but I'm passionate about creating games.",
+            services: [
+                "I create games.",
+                "I am ready to collaborate on projects.",
+            ],
+        },
+    ];
+
     return (
         <section className="services section" id="services">
             <h2 className="section__title">Services</h2>
             <span className="section__subtitle">What I offer</span>
 
             <div className="services__container container grid">
-                <div className="services__content">
-                    <div>
-                        <i className="uil uil-web-grid services__icon"></i>
-                        <h3 className="services__title">
-                            Product <br /> Designer
-                        </h3>
-                    </div>
-
-                    <span
-                        className="services__button"
-                        onClick={() => toggleTab(1)}
-                    >
-                        View More
-                        <i className="uil uil-arrow-right services__button-icon"></i>
-                    </span>
-
-                    <div
-                        className={
-                            toggleState === 1
-                                ? "services__modal active-modal"
-                                : "services__modal"
-                        }
-                    >
-                        <div className="services__modal-content">
-                            <i
-                                onClick={() => toggleTab(0)}
-                                className="uil uil-times services__modal-close"
-                            ></i>
-                            <h3 className="services__modal-title">
-                                Product Designer
-                            </h3>
-                            <p className="services__modal-description">
-                                Service with more than 3 years of experience.
-                                Providing quality work to clients and companies.
-                            </p>
-
-                            <ul className="services__modal-services grid">
-                                <li className="services__modal-service">
-                                    <i className="uil uil-check-circle services__modal-icon"></i>
-                                    <p className="services__modal-info">
-                                        I develop the user interface.
-                                    </p>
-                                </li>
-
-                                <li className="services__modal-service">
-                                    <i className="uil uil-check-circle services__modal-icon"></i>
-                                    <p className="services__modal-info">
-                                        I develop the user interface.
-                                    </p>
-                                </li>
-
-                                <li className="services__modal-service">
-                                    <i className="uil uil-check-circle services__modal-icon"></i>
-                                    <p className="services__modal-info">
-                                        I develop the user interface.
-                                    </p>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <div className="services__content">
-                    <div>
-                        <i className="uil uil-arrow services__icon"></i>
-                        <h3 className="services__title">
-                            Ui/Ux <br /> Designer
-                        </h3>
-                    </div>
-
-                    <span
-                        onClick={() => toggleTab(2)}
-                        className="services__button"
-                    >
-                        View More
-                        <i className="uil uil-arrow-right services__button-icon"></i>
-                    </span>
-
-                    <div
-                        className={
-                            toggleState === 2
-                                ? "services__modal active-modal"
-                                : "services__modal"
-                        }
-                    >
-                        <div className="services__modal-content">
-                            <i
-                                onClick={() => toggleTab(0)}
-                                className="uil uil-times services__modal-close"
-                            ></i>
-                            <h3 className="services__modal-title">
-                                Ui/Ux Designer
-                            </h3>
-                            <p className="services__modal-description">
-                                Service with more than 3 years of experience.
-                                Providing quality work to clients and companies.
-                            </p>
-
-                            <ul className="services__modal-services grid">
-                                <li className="services__modal-service">
-                                    <i className="uil uil-check-circle services__modal-icon"></i>
-                                    <p className="services__modal-info">
-                                        I develop the user interface.
-                                    </p>
-                                </li>
-
-                                <li className="services__modal-service">
-                                    <i className="uil uil-check-circle services__modal-icon"></i>
-                                    <p className="services__modal-info">
-                                        I develop the user interface.
-                                    </p>
-                                </li>
-
-                                <li className="services__modal-service">
-                                    <i className="uil uil-check-circle services__modal-icon"></i>
-                                    <p className="services__modal-info">
-                                        I develop the user interface.
-                                    </p>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <div className="services__content">
-                    <div>
-                        <i className="uil uil-edit services__icon"></i>
-                        <h3 className="services__title">
-                            Visual <br /> Designer
-                        </h3>
-                    </div>
-
-                    <span
-                        onClick={() => toggleTab(3)}
-                        className="services__button"
-                    >
-                        View More
-                        <i className="uil uil-arrow-right services__button-icon"></i>
-                    </span>
-
-                    <div
-                        className={
-                            toggleState === 3
-                                ? "services__modal active-modal"
-                                : "services__modal"
-                        }
-                    >
-                        <div className="services__modal-content">
-                            <i
-                                onClick={() => toggleTab(0)}
-                                className="uil uil-times services__modal-close"
-                            ></i>
-                            <h3 className="services__modal-title">
-                                Visual Designer
-                            </h3>
-                            <p className="services__modal-description">
-                                Service with more than 3 years of experience.
-                                Providing quality work to clients and companies.
-                            </p>
-
-                            <ul className="services__modal-services grid">
-                                <li className="services__modal-service">
-                                    <i className="uil uil-check-circle services__modal-icon"></i>
-                                    <p className="services__modal-info">
-                                        I develop the user interface.
-                                    </p>
-                                </li>
-
-                                <li className="services__modal-service">
-                                    <i className="uil uil-check-circle services__modal-icon"></i>
-                                    <p className="services__modal-info">
-                                        I develop the user interface.
-                                    </p>
-                                </li>
-
-                                <li className="services__modal-service">
-                                    <i className="uil uil-check-circle services__modal-icon"></i>
-                                    <p className="services__modal-info">
-                                        I develop the user interface.
-                                    </p>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+                {servicesData.map((service, index) => (
+                    <ServiceItem
+                        key={index}
+                        iconType={service.iconType}
+                        icon={service.icon}
+                        title={service.title}
+                        index={index + 1}
+                        toggleTab={toggleTab}
+                        activeTab={toggleState}
+                        description={service.description}
+                        services={service.services}
+                    />
+                ))}
             </div>
         </section>
     );

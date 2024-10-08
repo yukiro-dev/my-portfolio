@@ -16,17 +16,17 @@ const About = () => {
                     <Info />
 
                     <p className="about__description">
-                        I&apos;m a front-end developer with a passion for
-                        creating beautiful and functional web applications. I
-                        have a strong understanding of HTML, CSS, and
-                        JavaScript, and I&apos;m always looking to learn new
-                        technologies.
+                        I specialize in front-end development and UI/UX design,
+                        creating visually appealing, responsive websites that
+                        improve user interaction. My focus is on delivering
+                        seamless digital experiences that help your business
+                        stand out and engage your audience effectively.
                     </p>
 
                     <a download="" href={CV} className="button button--flex">
                         Download CV
                         <svg
-                            class="button__icon"
+                            className="button__icon"
                             xmlns="http://www.w3.org/2000/svg"
                             width="24"
                             height="24"
